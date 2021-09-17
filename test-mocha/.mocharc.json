@@ -1,0 +1,15 @@
+{
+  "recursive": true,
+  "require": [
+    "ts-node/register",
+    "chai/register-expect",
+    "chai/register-should",
+    "chai/register-assert"
+  ],
+  "extension": [
+    "ts"
+  ],
+  "timeout": 30000,
+  "retries": 0,
+  "inline-diffs": true
+}
