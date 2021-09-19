@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint snippets test-jest/test test-mocha/test"
+    "lint": "eslint snippets test-jest/test test-mocha/test test-jasmine/test"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.31.0",

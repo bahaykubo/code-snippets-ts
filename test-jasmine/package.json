@@ -1,0 +1,16 @@
+{
+  "name": "test-jasmine",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint test",
+    "test": "jasmine-ts --config=./jasmine.json"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.9.1",
+    "jasmine": "^3.9.0",
+    "jasmine-ts": "^0.4.0",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  }
+}
