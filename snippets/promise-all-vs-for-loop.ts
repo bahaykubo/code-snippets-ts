@@ -5,29 +5,30 @@ import { ConsoleColor } from '../config';
 // to see how much time we can save from using promise all compared to a for loop
 
 // we will create a promise that resolves after 2 seconds and rejects if given name is 'equal'
-const promisesPromises = (name: string, file?: string) => { return new Promise(async (resolve, reject) => {
-  if (name === 'error') {
-    return reject('name is wrong');
-  }
-  console.time(`time for ${name}`);
-  setTimeout(() => {
-    fs.mkdirSync('output', { recursive: true });
-    fs.appendFileSync(file ?? 'output/youCanRemoveMe.txt', `${Date.now()} - ${name}\n`);
-    console.timeEnd(`time for ${name}`);
-    return resolve(name);
-  }, 2000);
-})};
+const promisesPromises = (name: string, file?: string) => {
+  return new Promise((resolve, reject) => {
+    if (name === 'error') {
+      return reject('name is wrong');
+    }
+    console.time(`time for ${name}`);
+    setTimeout(() => {
+      fs.mkdirSync('output', { recursive: true });
+      fs.appendFileSync(file ?? 'output/youCanRemoveMe.txt', `${Date.now()} - ${name}\n`);
+      console.timeEnd(`time for ${name}`);
+      return resolve(name);
+    }, 2000);
+  });
+};
 
 // here is a function that does a promise all to await for the promise function to resolve
 // given a list of names
 const runAll = async (names: string[]) => {
   console.time('Promise all');
-  Promise.allSettled(names.map(async name => await promisesPromises(name, "output/promiseAll.txt")))
+  Promise.allSettled(names.map(async name => await promisesPromises(name, 'output/promiseAll.txt')))
     .then(response => {
       console.log('\x1b[32m%s\x1b[0m', `Promise all done -> ${JSON.stringify(response)}`);
-      console.timeEnd('Promise all')
-    })
-    // .catch(error => console.log(`Promise all error -> ${error}`));
+      console.timeEnd('Promise all');
+    });
 };
 
 // here is a function that loops through the list of names and
