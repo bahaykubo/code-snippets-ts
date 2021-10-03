@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint snippets test-jest/test test-mocha/test test-jasmine/test"
+    "lint": "eslint snippets test-jest/test test-mocha/test test-jasmine/test",
+    "watch": "yarn run nodemon"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.31.0",
@@ -13,6 +14,7 @@
     "date-fns-tz": "^1.1.6",
     "eslint": "^7.32.0",
     "moment": "^2.29.1",
+    "nodemon": "^2.0.13",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.3"
   }
