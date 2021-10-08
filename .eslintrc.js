@@ -17,16 +17,16 @@ module.exports = {
   ],
   'rules': {
     'indent': [
-        'error',
-        2,  { 'SwitchCase': 1, 'MemberExpression': 'off' }
+      'error',
+      2,  { 'SwitchCase': 1, 'MemberExpression': 'off' }
     ],
     'quotes': [
-        'error',
-        'single'
+      'error',
+      'single'
     ],
     'semi': [
-        'error',
-        'always'
+      'error',
+      'always'
     ],
     'no-trailing-spaces': [
       'error'
@@ -57,20 +57,20 @@ module.exports = {
     '@typescript-eslint/naming-convention': [
       'error',
       {
-        "selector": "default",
-        "format": ["camelCase"]
+        'selector': 'default',
+        'format': ['camelCase']
       },
       {
-        "selector": "variable",
-        "format": ["camelCase", "snake_case"]
+        'selector': 'variable',
+        'format': ['camelCase', 'snake_case']
       },
       {
-        "selector": "parameter",
-        "format": ["camelCase"],
+        'selector': 'parameter',
+        'format': ['camelCase'],
       },
       {
-        "selector": "enumMember",
-        "format": ["PascalCase"],
+        'selector': 'enumMember',
+        'format': ['PascalCase'],
       },
       {
         'selector': 'typeLike',
