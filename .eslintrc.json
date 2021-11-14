@@ -59,6 +59,14 @@
       "error",
       { "blankLine": "never", "prev": "import", "next": "import" }
     ],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxBOF": 0,
+        "maxEOF": 1
+      }
+    ],
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/member-delimiter-style": [
