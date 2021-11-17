@@ -1,4 +1,4 @@
-describe('Compare Test', function() {
+describe('Compare Test', function () {
 
   it('compare two objects', function () {
     const list = {

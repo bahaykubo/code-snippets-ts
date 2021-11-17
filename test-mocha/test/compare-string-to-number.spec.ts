@@ -1,10 +1,10 @@
 const comparisons = [
-  { number: 0.5, string: '0.5'},
-  { number: 1.0, string: '1.0'},
-  { number: 1.0, string: '1'},
-  { number: 1.10, string: '1.1'},
-  { number: 10.0, string: '10.0'},
-  { number: 10.0, string: '10'},
+  { number: 0.5, string: '0.5' },
+  { number: 1.0, string: '1.0' },
+  { number: 1.0, string: '1' },
+  { number: 1.10, string: '1.1' },
+  { number: 10.0, string: '10.0' },
+  { number: 10.0, string: '10' },
 ];
 
 comparisons.forEach(compare => {

@@ -32,7 +32,8 @@
     "semi": "error",
     "no-trailing-spaces": "error",
     "no-var": "error",
-    "no-unused-vars": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
     "prefer-const": "error",
     "no-tabs": "error",
     "no-useless-concat": "error",
@@ -67,6 +68,33 @@
         "maxEOF": 1
       }
     ],
+    "no-multi-spaces": "error",
+    "require-await": "error",
+    "keyword-spacing": "error",
+    "key-spacing": "error",
+    "space-before-blocks": "error",
+    "arrow-spacing": "error",
+    "func-call-spacing": "error",
+    "space-infix-ops": "error",
+    "object-curly-spacing": ["error", "always"],
+    "space-in-parens": ["error", "never"],
+    "spaced-comment": [
+      "error", "always",
+      {
+        "markers": ["/"],
+        "block": {
+          "balanced": true
+        }
+      }
+    ],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/member-delimiter-style": [
@@ -97,11 +125,12 @@
         "format": ["camelCase"]
       },
       {
-        "selector": "enumMember",
-        "format": ["PascalCase"]
+        "selector": ["memberLike", "parameter"],
+        "format": ["camelCase", "PascalCase", "snake_case"],
+        "leadingUnderscore": "allow"
       },
       {
-        "selector": "typeLike",
+        "selector": ["enumMember", "typeLike"],
         "format": ["PascalCase"]
       }
     ]

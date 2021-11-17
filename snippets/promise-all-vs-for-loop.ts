@@ -22,7 +22,7 @@ const promisesPromises = (name: string, file?: string) => {
 
 // here is a function that does a promise all to await for the promise function to resolve
 // given a list of names
-const runAll = async (names: string[]) => {
+const runAll = (names: string[]) => {
   console.time('Promise all');
   Promise.allSettled(names.map(async name => await promisesPromises(name, 'output/promiseAll.txt')))
     .then(response => {

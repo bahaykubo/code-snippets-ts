@@ -14,9 +14,9 @@ console.log(`Set date to start of day -> ${format(startOfDay(newDate), dateTimeF
 console.log(`Add days to date -> ${format(addDays(newDate, 1), dateTimeFormat)}`);
 
 console.log('Convert to timezone with date-fns-timezone and format with date-fns');
-console.log(format(utcToZonedTime(newDate, 'Asia/Manila'), dateTimeFormat, {timeZone: 'Asia/Manila'}));
-console.log(format(utcToZonedTime(newDate, 'Australia/Sydney'), dateTimeFormat, {timeZone: 'Australia/Sydney'}));
-console.log(format(utcToZonedTime(newDate, 'Pacific/Auckland'), dateTimeFormat, {timeZone: 'Pacific/Auckland'}));
+console.log(format(utcToZonedTime(newDate, 'Asia/Manila'), dateTimeFormat, { timeZone: 'Asia/Manila' }));
+console.log(format(utcToZonedTime(newDate, 'Australia/Sydney'), dateTimeFormat, { timeZone: 'Australia/Sydney' }));
+console.log(format(utcToZonedTime(newDate, 'Pacific/Auckland'), dateTimeFormat, { timeZone: 'Pacific/Auckland' }));
 
 // date-fns dates are immutable, compared to moment, which requires you to clone
 setTimeout(() => {

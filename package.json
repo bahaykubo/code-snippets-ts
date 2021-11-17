@@ -1,10 +1,9 @@
 {
   "name": "ts-code-snippets",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "scripts": {
-    "lint": "eslint snippets test-jest/test test-mocha/test test-jasmine/test",
+    "lint": "eslint snippets test-jest test-mocha test-jasmine",
     "watch": "yarn run nodemon"
   },
   "devDependencies": {
